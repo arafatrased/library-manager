@@ -27,6 +27,18 @@ A RESTful Library Management System built with **Express**, **TypeScript**, and 
 * **Tools:** Nodemon, ts-node-dev, dotenv
 
 ---
+###  Project Setup
+
+**Initating with Express, mongodb, mongoose, typescript**
+```
+npm i --y
+npm i express mongodb mongoose dotenv 
+npm i -D typescript
+npm i ts-node-dev
+
+```
+
+---
 
 ### Folder Structure
 
