@@ -28,7 +28,7 @@ A RESTful Library Management System built with **Express**, **TypeScript**, and 
 
 ---
 
-### 📂 Folder Structure
+### Folder Structure
 
 ```
 src/
@@ -48,7 +48,7 @@ src/
 
 ### API Endpoints
 
-#### 📘 Books
+####  Books
 
 | Method | Endpoint         | Description                       |
 | ------ | ---------------- | --------------------------------- |
@@ -58,11 +58,11 @@ src/
 | PUT    | `/api/books/:id` | Update book by ID                 |
 | DELETE | `/api/books/:id` | Delete book by ID                 |
 
-> ✅ **Query Support**: `/api/books?filter=FANTASY&sortBy=createdAt&sort=desc&limit=5`
+> **Query Support**: `/api/books?filter=FANTASY&sortBy=createdAt&sort=desc&limit=5`
 
 ---
 
-#### 📖 Borrow
+#### Borrow
 
 | Method | Endpoint      | Description                 |
 | ------ | ------------- | --------------------------- |
@@ -71,7 +71,7 @@ src/
 
 ---
 
-### 📄 Sample Book Object
+### Sample Book Object
 
 ```json
 {
@@ -98,7 +98,7 @@ src/
 
 ### 📬 Contact
 
-By \[**Arafat Rased**] — Full Stack Developer
+By **Arafat Rased** — Full Stack Developer
 
 
 ---
