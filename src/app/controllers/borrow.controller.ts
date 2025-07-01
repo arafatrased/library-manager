@@ -2,7 +2,7 @@ import { Request, Response, Router } from 'express';
 import { Book } from '../models/book.model';
 import { Borrow } from '../models/borrow.model';
 
-const borrowRouter: Router = Router();
+export const borrowRouter: Router = Router();
 
 // Borrow Book
 borrowRouter.post('/', async (req: Request, res: Response) => {
@@ -87,4 +87,3 @@ borrowRouter.get('/', async (req: Request, res: Response) => {
   });
 });
 
-export default borrowRouter;

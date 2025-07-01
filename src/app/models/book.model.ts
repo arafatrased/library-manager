@@ -32,7 +32,7 @@ const bookSchema = new Schema<IBookDocument>({
     versionKey: false
   });
 
-// instance method for availability
+// instance method for updating availability
 bookSchema.methods.updateAvailability = function () {
   this.available = this.copies > 0;
 };

@@ -1,11 +1,9 @@
 import express, { Application, Request, Response } from 'express';
 require('dotenv').config()
 
-
-import bookRouter from './app/controllers/book.controller';
-import borrowRouter from './app/controllers/borrow.controller';
 import { errorHandler } from './app/controllers/error.controller';
-
+import { bookRouter } from './app/controllers/book.controller';
+import { borrowRouter } from './app/controllers/borrow.controller';
 
 export const app: Application = express();
 

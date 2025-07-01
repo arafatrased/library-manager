@@ -1,9 +1,9 @@
 import { Request, Response, Router } from 'express';
 import { Book } from '../models/book.model';
 
-const bookRouter: Router = Router();
+export const bookRouter: Router = Router();
 
-// Create Book
+// Posting a book
 bookRouter.post('/', async (req: Request, res: Response) => {
   try {
     const book = new Book(req.body);
@@ -22,7 +22,7 @@ bookRouter.post('/', async (req: Request, res: Response) => {
   }
 });
 
-// Get All Books (with optional filter, sort, limit)
+// All Books
 bookRouter.get('/', async (req: Request, res: Response) => {
   const { filter, sortBy = 'createdAt', sort = 'desc', limit = '10' } = req.query;
 
@@ -41,7 +41,7 @@ bookRouter.get('/', async (req: Request, res: Response) => {
   });
 });
 
-// Get Book by ID
+// having single book
 bookRouter.get('/:bookId', async (req: Request, res: Response) => {
   const bookId = req.params.bookId;
   const book = await Book.findById(bookId);
@@ -81,12 +81,12 @@ bookRouter.put('/:bookId', async (req: Request, res: Response) => {
     res.status(400).json({
       success: false,
       message: 'Validation failed',
-      error,
+      error: error
     });
   }
 });
 
-// Delete Book
+// Delete a Book
 bookRouter.delete('/:bookId', async (req: Request, res: Response) => {
   await Book.findByIdAndDelete(req.params.bookId);
   res.json({
@@ -96,4 +96,4 @@ bookRouter.delete('/:bookId', async (req: Request, res: Response) => {
   });
 });
 
-export default bookRouter;
+

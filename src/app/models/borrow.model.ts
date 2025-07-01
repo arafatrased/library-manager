@@ -9,6 +9,10 @@ const borrowSchema = new Schema<IBorrow>({
     min: [1, "Borrow Minimum One Book"]
   },
   dueDate: { type: Date, required: true },
-}, { timestamps: true, versionKey: false });
+},
+  {
+    timestamps: true,
+    versionKey: false
+  });
 
 export const Borrow = model<IBorrow>('Borrow', borrowSchema);
